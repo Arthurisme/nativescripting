@@ -12,9 +12,9 @@ import {Observable} from "rxjs";
       
       <StackLayout>
         <ListView [items] = "currencies$ | async">
-          <ng-template>
+          <ng-template let-item="item">
             <StackLayout>
-              <Label [test】="item.name"></Label>
+              <Label [text]="item.name"></Label>
             </StackLayout>
           </ng-template>
         </ListView>

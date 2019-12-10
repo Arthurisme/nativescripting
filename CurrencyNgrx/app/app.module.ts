@@ -9,7 +9,7 @@ import {CoreModule} from "~/core/core.module";
 @NgModule({
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  imports: [NativeScriptModule, CoreModule],
+  imports: [NativeScriptModule, CoreModule.forRoot()],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
