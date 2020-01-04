@@ -1,7 +1,6 @@
 import {Currency} from "~/currency/models/currency.model";
 import {State} from "@ngrx/store";
 import * as currencyActions from '../actions';
-import {LoadCurrency} from "../actions";
 
 
 export interface State {
@@ -32,48 +31,43 @@ export const initialState: State = {
         "percent_change_24h": "-0.67",
         "percent_change_7d": "-0.51",
         "last_updated": "1577887476"
-    }]
-}
+    },
+    ],
+};
 
-
-// @ts-ignore
-export function reducer (state: initialState, action: currencyActions) : State {
-
+export function reducer(
+    state = initialState,
+    action: currencyActions.Actions,
+): State {
     switch (action.type) {
-        case currencyActions.LOAD_CURRENCY:{
+        case currencyActions.LOAD_CURRENCY: {
             return {
                 loading: true,
                 ...state,
-
             };
         }
 
-        case currencyActions.LOAD_CURRENCY_SUCCESS:{
+        case currencyActions.LOAD_CURRENCY_SUCCESS: {
             return {
                 ...state,
                 loading: false,
-                date: action.payload,
+                data: action.payload,
             };
         }
-
-        case currencyActions.LOAD_CURRENCY_FAIL:{
+        case currencyActions.LOAD_CURRENCY_FAIL: {
             return {
-
                 loading: false,
                 ...state,
             };
         }
-
-        default : {
+        default: {
             return state;
         }
-
-
-
-
-
-
-
-
     }
 }
+// @ts-ignore
+export const getCurrencies = (state: State) => state.data;
+
+
+// @ts-ignore
+export const getCurrenciesLoading = (state: State) => state.loading;

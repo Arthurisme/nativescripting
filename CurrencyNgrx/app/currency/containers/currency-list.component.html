@@ -1,0 +1,17 @@
+<ActionBar title="Currency List" class="action-bar"></ActionBar>
+
+<StackLayout>
+
+<!--    <Label text="Hello World!"></Label>-->
+    <ListView [items]="currency$ | async" class="list-group" height="100%">
+        <ng-template let-item="item">
+            <GridLayout columns="*, auto" , rows="*, *">
+                <Label col="0" row="0" [text]="item.name" class="list-group-item"></Label>
+                <Label col="0" row="1" [text]="item.symbol" class="list-group-item"></Label>
+                <Label col="1" row="0" [text]="item.percent_change_1h" class="list-group-item"></Label>
+                <Label col="1" row="1" [text]="item.price_usd | currency:'USD':'$'" class="list-group-item"></Label>
+            </GridLayout>
+<!--            <app-currency-item [currency]="item"></app-currency-item>-->
+        </ng-template>
+    </ListView>
+</StackLayout>

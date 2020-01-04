@@ -6,20 +6,7 @@ import {Observable} from "rxjs";
 
 @Component({
   selector: "my-app",
-  template: `
-    <ActionBar title="My App" class="action-bar"></ActionBar>
-    <!-- Your UI components go here -->
-      
-      <StackLayout>
-        <ListView [items] = "currencies$ | async">
-          <ng-template let-item="item">
-            <StackLayout>
-              <Label [text]="item.name"></Label>
-            </StackLayout>
-          </ng-template>
-        </ListView>
-      </StackLayout>
-  `
+  templateUrl: 'app.component.html',
 })
 export class AppComponent implements OnInit {
   // Your TypeScript logic goes here
