@@ -6,13 +6,12 @@ import {Currency} from "~/currency/models/currency.model";
 @Injectable()
 export class CurrencyService {
 
-
-    // private ROOT_URL = `https://api.coinmarketcap.com/v1/ticker`;
-    private ROOT_URL = `https://api.coinmarketcap.com/v1`;
+    // Fetch the date via Http(if we have a http api provide data):
+     private ROOT_URL = `https://api.intactai.com/catfactlist/v1`;
     constructor(private http: HttpClient) { }
 
     // @ts-ignore
     getCurrencyData(): Observable<Currency[]> {
-        return this.http.get<Currency[]>(`${this.ROOT_URL}/ticker`);
+        // return this.http.get<Currency[]>(`${this.ROOT_URL}/ticker`);
     }
 }

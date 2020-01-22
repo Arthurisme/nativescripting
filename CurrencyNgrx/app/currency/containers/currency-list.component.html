@@ -8,7 +8,7 @@
             <GridLayout columns="*, auto" , rows="*, *">
                 <Label col="0" row="0" [text]="item.name" class="list-group-item"></Label>
                 <Label col="0" row="1" [text]="item.symbol" class="list-group-item"></Label>
-                <Label col="1" row="0" [text]="item.percent_change_1h" class="list-group-item"></Label>
+                <Label col="1" row="0" [text]="item.origin" class="list-group-item"></Label>
                 <Label col="1" row="1" [text]="item.price_usd | currency:'USD':'$'" class="list-group-item"></Label>
             </GridLayout>
 <!--            <app-currency-item [currency]="item"></app-currency-item>-->
