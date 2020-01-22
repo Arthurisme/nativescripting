@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
-import * as fromCurrency from '../reducers';
-import * as currencyActions from '../actions';
+import * as fromCurrency from '../state/reducers';
+import * as currencyActions from '../state/actions';
 
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";

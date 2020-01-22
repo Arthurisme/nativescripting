@@ -4,7 +4,7 @@ import { switchMap, map, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 import * as currencyActions from '../actions';
-import { CurrencyService } from '../services/currency.service';
+import { CurrencyService } from '../../services/currency.service';
 
 @Injectable()
 export class CurrencyEffects {

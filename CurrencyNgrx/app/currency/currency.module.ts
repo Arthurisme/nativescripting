@@ -7,8 +7,8 @@ import {CurrencyRoutingModule} from "~/currency/currency.routing";
 
 import {StoreModule} from "@ngrx/store";
 import {EffectsModule} from "@ngrx/effects";
-import {reducers} from "~/currency/reducers";
-import {CurrencyEffects} from "~/currency/effects";
+import {reducers} from "~/currency/state/reducers";
+import {CurrencyEffects} from "~/currency/state/effects";
 
 @NgModule({
     imports: [

@@ -10,6 +10,7 @@ export interface State {
     currency: fromCurrency.State;
 }
 
+// @ts-ignore
 export const reducers: ActionReducerMap<State> = {
     currency: fromCurrency.reducer,
 };
