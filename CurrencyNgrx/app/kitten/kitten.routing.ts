@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {Routes} from "@angular/router";
 import {NativeScriptRouterModule} from "nativescript-angular";
-import {CurrencyListComponent} from "~/currency/containers/currency-list.component";
+import {KittenListComponent} from "~/kitten/containers/kitten-list.component";
 
 
 const routes: Routes = [
-    { path: '', component: CurrencyListComponent},
+    { path: '', component: KittenListComponent},
 ];
 
 @NgModule({
@@ -13,5 +13,5 @@ const routes: Routes = [
     exports: [NativeScriptRouterModule],
 
 })
-export class CurrencyRoutingModule {
+export class KittenRoutingModule {
 }

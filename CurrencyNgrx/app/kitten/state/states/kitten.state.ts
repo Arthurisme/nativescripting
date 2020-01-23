@@ -1,10 +1,10 @@
-import {State} from "@ngrx/store";
-import {Currency} from "~/currency/models/currency.model";
+//import {State} from "@ngrx/store";
+import {Kitten} from "~/kitten/models/kitten.model";
 
 export interface State {
 
     loading : boolean;
-    data: Currency[];
+    data: Kitten[];
 
 }
 

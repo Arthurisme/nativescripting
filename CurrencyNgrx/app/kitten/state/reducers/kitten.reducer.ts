@@ -1,32 +1,32 @@
-import {Currency} from "~/currency/models/currency.model";
+import {Kitten} from "~/kitten/models/kitten.model";
 
-import * as currencyActions from '../actions';
-import {State,initialState} from "~/currency/state/states/currency.state";
-export { State, initialState }  from "~/currency/state/states/currency.state";
+import * as kittenActions from '../actions';
+import {State,initialState} from "../states";
+export { State, initialState }  from "../states";
 
 
 
 
 export function reducer(
     state= initialState,
-    action: currencyActions.Actions,
+    action: kittenActions.Actions,
 ): any {
     switch (action.type) {
-        case currencyActions.LOAD_CURRENCY: {
+        case kittenActions.LOAD_KITTEN: {
             return {
                 loading: true,
                 ...state,
             };
         }
 
-        case currencyActions.LOAD_CURRENCY_SUCCESS: {
+        case kittenActions.LOAD_KITTEN_SUCCESS: {
             return {
                 ...state,
                 loading: false,
                 data: action.payload,
             };
         }
-        case currencyActions.LOAD_CURRENCY_FAIL: {
+        case kittenActions.LOAD_KITTEN_FAIL: {
             return {
                 loading: false,
                 ...state,

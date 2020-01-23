@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import {CurrencyService} from "~/currency/services/currency.service";
-import {Currency} from "~/currency/models/currency.model";
+import {KittenService} from "~/kitten/services/kitten.service";
+import {Kitten} from "~/kitten/models/kitten.model";
 import {Observable} from "rxjs";
 
 
@@ -11,12 +11,12 @@ import {Observable} from "rxjs";
 export class AppComponent implements OnInit {
   // Your TypeScript logic goes here
 
-  currencies$ : Observable<Currency[]>;
+  kittens$ : Observable<Kitten[]>;
 
 
-  constructor(private currencyService: CurrencyService){}
+  constructor(private kittenService: KittenService){}
 
   ngOnInit() {
-    this.currencies$ = this.currencyService.getCurrencyData();
+    this.kittens$ = this.kittenService.getKittenData();
   }
 }

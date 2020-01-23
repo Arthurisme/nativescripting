@@ -7,7 +7,7 @@ const routes: Routes = [
     { path: '', redirectTo: '/currency-list', pathMatch: 'full' },
     {
         path: 'currency-list',
-        loadChildren: './currency/currency.module#CurrencyModule',
+        loadChildren: './kitten/kitten.module#KittenModule',
     },
 ];
 

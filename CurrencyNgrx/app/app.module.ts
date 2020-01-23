@@ -8,7 +8,7 @@ import {NativeScriptRouterModule, NSModuleFactoryLoader} from 'nativescript-angu
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { reducer } from './currency/state/reducers/currency.reducer';
+import { reducer } from './kitten/state/reducers/kitten.reducer';
 
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';

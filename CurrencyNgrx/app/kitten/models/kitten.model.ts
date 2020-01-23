@@ -1,4 +1,4 @@
-export interface Currency {
+export interface Kitten {
     id: string;
     name: string;
     origin: string;

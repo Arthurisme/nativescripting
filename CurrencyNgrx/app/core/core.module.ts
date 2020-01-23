@@ -1,6 +1,6 @@
 import {ModuleWithProviders, NgModule, Optional, SkipSelf} from '@angular/core';
 import {NativeScriptHttpClientModule} from "nativescript-angular/http-client";
-import {CurrencyService} from "~/currency/services/currency.service";
+import {KittenService} from "~/kitten/services/kitten.service";
 
 
 
@@ -12,7 +12,7 @@ export class CoreModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: CoreModule,
-            providers: [CurrencyService]
+            providers: [KittenService]
 
         }
     }
